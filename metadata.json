@@ -1,0 +1,8 @@
+{
+  "name": "I Am A Triumphant Butterfly - Transformational Coaching",
+  "description": "A premium, high-converting web platform for I Am A Triumphant Butterfly, featuring coaching services, testimonials, and TidyCal booking integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
