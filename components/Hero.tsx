@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-brand-light opacity-60 rounded-bl-[100px] animate-soft-pulse" />
       <div className="absolute -top-24 -left-24 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl animate-float-slow" />
@@ -58,16 +58,14 @@ export const Hero: React.FC = () => {
           </div>
           
           <div className="relative order-1 lg:order-2 mb-12 lg:mb-0">
-            {/* The Image Container - No white border, strictly using hero1.png at root */}
-            <div className="relative aspect-video lg:aspect-[16/9] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(145,95,55,0.25)] z-10 group bg-brand-light">
+            {/* The Image Container - Optimized for instant rendering */}
+            <div className="relative aspect-video lg:aspect-[16/9] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(145,95,55,0.25)] z-10 group">
               <img 
-                src="hero1.png" 
+                src="./hero1.png" 
                 alt="I Am A Triumphant Butterfly" 
                 className="block w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out"
                 loading="eager"
               />
-              {/* Subtle visual protection layer */}
-              <div className="absolute inset-0 bg-brand-dark/5 opacity-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-700" />
             </div>
             
             {/* Floating Trust Card */}

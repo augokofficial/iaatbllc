@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Target, Zap, ShieldCheck } from 'lucide-react';
 
