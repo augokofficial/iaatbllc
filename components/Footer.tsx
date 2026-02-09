@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Instagram, Facebook, Twitter, Mail } from 'lucide-react';
-import { Logo } from './Header';
+import { Logo } from './Header.tsx';
 
 export const Footer: React.FC = () => {
   return (

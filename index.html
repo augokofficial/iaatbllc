@@ -8,10 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Babel Standalone: Enables the browser to understand React (JSX) and TypeScript (.tsx) files directly -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <style>
+        :root {
+            color-scheme: light;
+        }
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+            background-color: white !important;
+            margin: 0;
+            padding: 0;
         }
         h1, h2, h3, h4, .font-serif {
             font-family: 'Playfair Display', serif;
@@ -19,7 +29,7 @@
         .bg-brand-primary { background-color: #915F37; }
         .text-brand-primary { color: #915F37; }
         .border-brand-primary { border-color: #915F37; }
-        .bg-brand-light { background-color: #FAF6F1; } /* Slightly warmer to match hero1.png */
+        .bg-brand-light { background-color: #FAF6F1; }
 
         @keyframes check-pop {
           0% { transform: scale(1); }
@@ -57,19 +67,34 @@
         .animate-float-slow {
           animation: float-slow 12s infinite ease-in-out;
         }
+        
+        #root:empty::before {
+            content: 'Loading your experience...';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #915F37;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
 <body class="bg-white text-gray-900 overflow-x-hidden">
     <div id="root"></div>
+    <!-- Updated script type to text/babel for runtime compilation -->
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="index.tsx"></script>
 </body>
 </html>

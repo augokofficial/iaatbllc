@@ -1,12 +1,11 @@
-
-import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Services } from './components/Services';
-import { Testimonials } from './components/Testimonials';
-import { Booking } from './components/Booking';
-import { Footer } from './components/Footer';
+import React from 'react';
+import { Header } from './components/Header.tsx';
+import { Hero } from './components/Hero.tsx';
+import { About } from './components/About.tsx';
+import { Services } from './components/Services.tsx';
+import { Testimonials } from './components/Testimonials.tsx';
+import { Booking } from './components/Booking.tsx';
+import { Footer } from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (

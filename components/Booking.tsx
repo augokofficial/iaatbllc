@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Calendar, CheckCircle2, PartyPopper, ArrowRight } from 'lucide-react';
-import { TIDYCAL_URL } from '../constants';
+import { TIDYCAL_URL } from '../constants.ts';
 
 interface BookingProps {
   id: string;
