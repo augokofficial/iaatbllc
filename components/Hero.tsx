@@ -5,13 +5,13 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 -z-10 w-3/5 h-full bg-[#FAF7F2] opacity-70 rounded-bl-[120px] animate-soft-pulse" />
+      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-[#FAF7F2] opacity-70 rounded-bl-[120px] animate-soft-pulse" />
       <div className="absolute -top-24 -left-24 w-80 h-80 bg-brand-primary/5 rounded-full blur-3xl animate-float-slow" />
       <div className="absolute bottom-10 right-10 w-full max-w-2xl h-96 bg-[#915F37]/5 rounded-full blur-[120px] animate-soft-pulse" style={{ animationDelay: '2s' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-16 items-center">
-          <div className="max-w-2xl order-2 lg:order-1 lg:col-span-2">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-2xl order-2 lg:order-1">
             <div className="inline-flex items-center space-x-2 bg-brand-primary/10 px-4 py-1.5 rounded-full text-brand-primary text-xs font-bold uppercase tracking-widest mb-8">
               <span className="flex h-2 w-2 rounded-full bg-brand-primary animate-pulse" />
               <span>Certified Coaching • Resilience Training</span>
@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="relative order-1 lg:order-2 lg:col-span-3 mb-12 lg:mb-0">
+          <div className="relative order-1 lg:order-2 mb-12 lg:mb-0">
             {/* The Image Container */}
             <div className="relative aspect-[4/3] lg:aspect-[1.4/1] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(145,95,55,0.25)] z-10 group bg-[#F8F5F1]">
               
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
               <img 
                 src="hero1.webp"
                 alt="A professional Black female coach conducting an empowering session with a Hispanic female client in a bright, modern living room" 
-                className="block w-full h-full object-cover object-[30%_center] transform group-hover:scale-105 transition-transform duration-[3s] ease-out"
+                className="block w-full h-full object-cover object-[40%_center] transform group-hover:scale-105 transition-transform duration-[3s] ease-out"
                 fetchPriority="high"
                 decoding="sync"
               />
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
             </div>
             
             {/* Floating Trust Card */}
-            <div className="absolute -bottom-8 -right-4 lg:-right-8 bg-white/95 backdrop-blur-md p-3 lg:p-4 rounded-3xl shadow-2xl z-20 max-w-[200px] border border-brand-primary/10 transition-all duration-500 hover:-translate-y-2">
+            <div className="absolute -bottom-8 -right-4 lg:-right-8 bg-white/95 backdrop-blur-md p-6 lg:p-8 rounded-3xl shadow-2xl z-20 max-w-[260px] border border-brand-primary/10 transition-all duration-500 hover:-translate-y-2">
                <div className="flex gap-1 mb-3">
                  {[1,2,3,4,5].map(i => <Star key={i} size={14} fill="currentColor" className="text-brand-primary" />)}
                </div>
