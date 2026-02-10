@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
               <img 
                 src="hero1.webp"
                 alt="A professional Black female coach conducting an empowering session with a Hispanic female client in a bright, modern living room" 
-                className="block w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-[3s] ease-out"
+                className="block w-full h-full object-cover object-[40%_center] transform group-hover:scale-105 transition-transform duration-[3s] ease-out"
                 fetchPriority="high"
                 decoding="sync"
               />

@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <Logo className="w-10 h-10 text-brand-primary" />
+              <Logo className="w-10 h-10" usePNG={true} />
               <span className="text-xl font-serif font-bold text-gray-800 tracking-tight">I Am A Triumphant Butterfly</span>
             </div>
             <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">

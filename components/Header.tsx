@@ -2,13 +2,25 @@
 import React, { useState } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 
-export const Logo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 40C50 40 45 20 25 20C5 20 5 45 25 55C15 65 20 85 40 80C45 78 50 70 50 70C50 70 55 78 60 80C80 85 85 65 75 55C95 45 95 20 75 20C55 20 50 40 50 40Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M50 35V75" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-    <path d="M42 30C42 30 44 25 50 25C56 25 58 30 58 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-  </svg>
-);
+export const Logo: React.FC<{ className?: string; usePNG?: boolean }> = ({ className = "w-10 h-10", usePNG = false }) => {
+  if (usePNG) {
+    return (
+      <img 
+        src="https://www.genspark.ai/api/files/s/AVFyfNlQ" 
+        alt="Triumphant Butterfly Logo" 
+        className={className}
+      />
+    );
+  }
+  
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 40C50 40 45 20 25 20C5 20 5 45 25 55C15 65 20 85 40 80C45 78 50 70 50 70C50 70 55 78 60 80C80 85 85 65 75 55C95 45 95 20 75 20C55 20 50 40 50 40Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M50 35V75" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M42 30C42 30 44 25 50 25C56 25 58 30 58 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+};
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +36,7 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
-             <Logo className="w-12 h-12 text-brand-primary" />
+             <Logo className="w-12 h-12" usePNG={true} />
              <div className="flex flex-col">
                <span className="text-xl font-serif font-bold text-gray-800 tracking-tight leading-none">I Am A</span>
                <span className="text-xl font-serif font-bold text-brand-primary tracking-tight leading-none">Triumphant Butterfly</span>

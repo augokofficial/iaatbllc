@@ -3,8 +3,17 @@ import { Target, Zap, ShieldCheck } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-brand-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-brand-light relative overflow-hidden">
+      {/* Subtle background logo watermark */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none">
+        <img 
+          src="https://www.genspark.ai/api/files/s/AVFyfNlQ" 
+          alt="" 
+          className="w-[600px] h-[600px]"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-8">Unfold Your Wings</h2>
           <p className="text-xl text-gray-600 mb-16 leading-relaxed">
